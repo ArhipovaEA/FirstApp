@@ -1,62 +1,34 @@
 ﻿using System;
 
-namespace ConsoleApp1
+class MainClass
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-           /* string MyName = "Jane";
-            byte MyAge = 27;
-            bool HavePet = true;
-            double MyShoeSize = 37.5;
-            DaysOfWeek MyFavoriteDay;
+	public static void Main(string[] args)
+	{
+		Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
-            Console.WriteLine("My name is " + MyName);
+		var color = Console.ReadLine();
 
-            Console.WriteLine("My age is " + MyAge);
-            Console.WriteLine("Do I have a pet? " + HavePet);
-            Console.WriteLine("My shoe size is "+ MyShoeSize);
+		if (color == "red")
+		{
+			Console.BackgroundColor = ConsoleColor.Red;
+			Console.ForegroundColor = ConsoleColor.Black;
 
-            MyFavoriteDay = DaysOfWeek.Friday;
-            Console.WriteLine(MyFavoriteDay);
+			Console.WriteLine("Your color is red!");
+		}
 
-            byte age = (byte)int.Parse(Console.ReadLine());
-            Console.WriteLine(age);
-           */
+		else if (color == "green")
+		{
+			Console.BackgroundColor = ConsoleColor.Green;
+			Console.ForegroundColor = ConsoleColor.Black;
 
-            /*Практика анкетируем пользователя*/
-            Console.WriteLine("Введите ваше имя:");
-            var Name = Console.ReadLine();
-            Console.WriteLine("Введите ваш возраст:");
-            var Age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Вас зовут {0} и вам {1} лет", Name, Age);
-            
-            Console.WriteLine("Введите дату вашего рождения:");
-            var Birthday = Console.ReadLine();
-            Console.WriteLine("Ваш день рождения {0}", Birthday);
+			Console.WriteLine("Your color is green!");
+		}
+		else
+		{
+			Console.BackgroundColor = ConsoleColor.Cyan;
+			Console.ForegroundColor = ConsoleColor.Black;
 
-
-            Console.ReadKey();
-
-         }
-    }
-
-    enum DaysOfWeek : byte
-    {
-        Monday = 1,
-        Tuesday,
-        Wednesday,
-        Thurday,
-        Friday,
-        Saturday,
-        Sunday
-    }
-
-    enum Semaphore : int
-    {
-        Red = 100,
-        Yellow = 200,
-        Green = 300
-    }
+			Console.WriteLine("Your color is cyan!");
+		}
+	}
 }
